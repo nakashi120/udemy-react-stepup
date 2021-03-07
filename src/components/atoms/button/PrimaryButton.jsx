@@ -3,7 +3,6 @@ import { BaseButton } from "./BaseButton"
 
 export const PrimaryButton = (props) => {
   const { children } = props
-  console.log(props)
   return <SButton>{children}</SButton>
 }
 
