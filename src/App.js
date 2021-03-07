@@ -1,20 +1,13 @@
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
-import { Router } from "./router/Router"
-
 import React from "react"
+import { PrimaryButton } from "./components/atoms/button/PrimaryButton"
+import { SecondaryButton } from "./components/atoms/button/SecondaryButton"
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/page1">Page1</Link>
-        <br />
-        <Link to="/page2">Page2</Link>
-      </div>
-      <Router />
-    </BrowserRouter>
+    <div className="App">
+      <PrimaryButton>テスト</PrimaryButton>
+      <SecondaryButton>検索</SecondaryButton>
+    </div>
   )
 }
 
