@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback, useMemo } from "react"
 import { ChildArea } from "./ChildArea"
 
 function App() {
@@ -14,12 +14,17 @@ function App() {
     setOpen(!open)
   }
 
+  const onClickClose = useCallback(() => setOpen(false), [setOpen])
+
+  const temp = useMemo(() => 1 + 3, [])
+  console.log(temp)
+
   return (
     <>
       <input value={text} onChange={onChangeText} />
       <br />
       <button onClick={onClickOpen}>表示</button>
-      <ChildArea open={open} />
+      <ChildArea open={open} onClickClose={onClickClose} />
     </>
   )
 }
