@@ -1,13 +1,29 @@
 import React from "react"
 import "./styles.css"
-import { Router } from "./router/Router"
-import { UserProvider } from "./providers/UserProvider"
+import axios from "axios"
 
 const App = () => {
+  const onClickUsers = () => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((result) => {
+        console.log(result.data)
+      })
+      .catch((err) => console.log(err))
+  }
+  const onClickUser1 = () => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/users/1")
+      .then((result) => {
+        console.log(result.data)
+      })
+      .catch((err) => console.log(err))
+  }
   return (
-    <UserProvider>
-      <Router />
-    </UserProvider>
+    <>
+      <button onClick={onClickUsers}>users</button>
+      <button onClick={onClickUser1}>id=1のuser</button>
+    </>
   )
 }
 
