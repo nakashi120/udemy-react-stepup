@@ -1,9 +1,14 @@
 import React from "react"
 import "./styles.css"
 import { Router } from "./router/Router"
+import { UserProvider } from "./providers/UserProvider"
 
 const App = () => {
-  return <Router />
+  return (
+    <UserProvider>
+      <Router />
+    </UserProvider>
+  )
 }
 
 export default App
