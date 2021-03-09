@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, memo } from "react"
 import styled from "styled-components"
 import { UserContext } from "../../../providers/UserProvider"
 

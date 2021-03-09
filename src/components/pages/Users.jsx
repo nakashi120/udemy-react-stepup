@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, memo } from "react"
 import styled from "styled-components"
 import { UserContext } from "../../providers/UserProvider"
 import { SecondaryButton } from "../atoms/button/SecondaryButton"
